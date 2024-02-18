@@ -36,7 +36,7 @@ export default function Home() {
         <p className="mt-6 text-lg max-w-prose text-muted-foreground">Ini cuman test doang</p>
         <div className="flex flex-col sm:flex-row gap-4 mt-6">
           <Link href='/products' className={buttonVariants()}>Github Profile</Link>
-          <button variant='ghost'>This Project &rarr;</button>
+          <button>This Project &rarr;</button>
         </div>
       </div>
     </MaxWidthWrapper>
