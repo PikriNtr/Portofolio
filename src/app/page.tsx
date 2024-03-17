@@ -1,27 +1,28 @@
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { buttonVariants } from "@/components/ui/button";
-import { CheckCircle, ArrowDownToLine, Leaf } from "lucide-react";
+import { CheckCircle, ArrowDownToLine, Video, Code, Airplay, Github } from "lucide-react";
 import Link from "next/link";
 
 const perks = [
   {
-    name: 'isi somthing1',
-    Icon: ArrowDownToLine,
-    description: "test1234567888888",
+    name: 'Device',
+    Icon: Airplay,
+    description: "im using Laptop for coding and editing. I also use smartphone for testing and debugging mobile application.",
   },
   {
-    name: 'isi somthing2',
-    Icon: CheckCircle,
-    description: "test1234567888888",
-  },
-  {
-    name: 'isi somthing3',
-    Icon: Leaf,
-    description: "test1234567888888",
+    name: 'Programming Language',
+    Icon: Code,
+      description: "I can use Javascript, Typescript for programming language. Still Learning on Python and C++. I also can use React, Next.js, and Flutter little bit for building web and mobile application. I also can use Node.js for backend development."
+    },
+    {
+      name: 'Editing Software',
+      Icon: Video,
+      description: "Im using Adobe After Effect, Adobe Premiere Pro, and Alight Motion for video editing. I also use Adobe Photoshop (little bit) for photo editing. Iam also using Figma for UI/UX Design and FL Studio for music production.",
   }
 ]
 
 export default function Home() {
+  
   return (
     <>
     <MaxWidthWrapper>
@@ -35,7 +36,7 @@ export default function Home() {
         </h1>
         <p className="mt-6 text-lg max-w-prose text-muted-foreground">Ini cuman test doang</p>
         <div className="flex flex-col sm:flex-row gap-4 mt-6">
-          <Link href='/products' className={buttonVariants()}>Github Profile</Link>
+          <Link href='https://github.com/PikriNtr' className={buttonVariants()}>Github Profile</Link>
           <button>This Project &rarr;</button>
         </div>
       </div>
@@ -67,7 +68,48 @@ export default function Home() {
       </div>
     </MaxWidthWrapper>
   </section>
+
+  <footer className="py-10 px-6 bg-gradient-to-r from-gray-800 to-gray-900 text-white">
+  <MaxWidthWrapper>
+    <div className="flex justify-between mt-10">
+      <div>
+        <h3 className="text-lg font-semibold mb-2">About</h3>
+        <ul className="space-y-2 text-sm">
+          <li><a href="#" className="hover:underline">Our Story</a></li>
+          <li><a href="#" className="hover:underline">Benefits</a></li>
+          <li><a href="#" className="hover:underline">Partners</a></li>
+          <li><a href="#" className="hover:underline">Team</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 className="text-lg font-semibold mb-2">Social</h3>
+        <ul className="space-y-2 text-sm">
+          <li><a href="#" className="hover:underline">Facebook</a></li>
+          <li><a href="#" className="hover:underline">Twitter</a></li>
+          <li><a href="#" className="hover:underline">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div className="mt-10 border-t border-gray-700 pt-10">
+      <div className="flex justify-between items-center">
+        <div>
+          <h3 className="text-lg font-semibold">PikriNtr</h3>
+          <p className="text-sm">© {new Date().getFullYear()} All rights reserved.</p>
+        </div>
+        <div>
+          <Link href='https://github.com/PikriNtr' className="text-white hover:text-gray-300">
+            <Github size={24} />
+          </Link>
+        </div>
+      </div>
+    </div>
+    </MaxWidthWrapper>
+  </footer>
   </>
   );
 }
+
+
+
+
 //lagi stop di menit 44.00 (https://www.youtube.com/watch?v=06g6YJ6JCJU)
