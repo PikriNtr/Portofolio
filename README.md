@@ -1,4 +1,4 @@
-# Project Title
+# Portofolio
 
 This project is a React application built with Next.js and deployed on Vercel. It uses the Lucide React library for icons and a custom `MaxWidthWrapper` component to control the layout of the content.
 
