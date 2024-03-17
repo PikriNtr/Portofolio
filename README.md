@@ -1,4 +1,46 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Project Title
+
+This project is a React application built with Next.js and deployed on Vercel. It uses the Lucide React library for icons and a custom `MaxWidthWrapper` component to control the layout of the content.
+
+## Components
+
+### MaxWidthWrapper
+
+This component is used to wrap the content and control its maximum width.
+
+### Icons
+
+Icons are imported from the `lucide-react` library. These icons are used in the `perks` array to visually represent different categories.
+
+## Data Structure
+
+### perks
+
+This is an array of objects, where each object represents a category of information. Each object has a `name`, an `Icon`, and a `description`.
+
+## Main Function
+
+### Home
+
+This is the main function of the application. It returns a JSX element that represents the layout of the page. The layout includes a header, a section for displaying the `perks`, and a footer.
+
+The `perks` are mapped to individual components, each containing an icon, a title (the `name`), and a description.
+
+## Excerpt Explanation
+
+The provided excerpt is a section of the `Home` function. It starts with the closing tag of a `MaxWidthWrapper` component, then opens a new `section` element. Inside this section, there's another `MaxWidthWrapper` component that contains a `div` with a grid layout.
+
+The `perks` array is mapped to individual components inside this grid. Each component is a `div` with a key of `perk.name`. Inside this `div`, there's another `div` that contains the `perk.Icon` inside a circle, and a `div` that contains the `perk.name` and `perk.description`.
+
+## Styling
+
+The application uses Tailwind CSS for styling. Class names are used to apply styles to the elements.
+
+## Note
+
+This is a general overview of the code structure. The actual values and text content used in the project are not included in this description.
+
+
 
 ## Getting Started
 
