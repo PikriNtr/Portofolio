@@ -28,9 +28,9 @@ export default function Home() {
     <MaxWidthWrapper>
       <div className="py-20 mx-auto text-center flex flex-col items-center max-w-3xl">
         <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-          Muh Fikri Haikal Adudu{' '}
+          Fikri Haikal{' '}
           <span className="text-blue-600">
-            Pemula
+            (PikriNtr)
           </span>
           .
         </h1>
@@ -75,7 +75,6 @@ export default function Home() {
       <div>
         <h3 className="text-lg font-semibold mb-2">About</h3>
         <ul className="space-y-2 text-sm">
-          <li><a href="#" className="hover:underline">Our Story</a></li>
           <li><a href="#" className="hover:underline">Benefits</a></li>
           <li><a href="#" className="hover:underline">Partners</a></li>
           <li><a href="#" className="hover:underline">Team</a></li>
