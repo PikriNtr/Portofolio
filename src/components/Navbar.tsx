@@ -9,10 +9,10 @@ const Navbar = () => {
             <header className="relative bg-white">
                 <MaxWidthWrapper>
                     <div className="border-b border-gray-200">
-                        <div className="flex h-16 items-center">
+                        <div className="flex h-16 items-center justify-between">
                             <div className="ml-4 flex lg:ml-0">
-                                <Link href='/'>
-                                    <Icons.logo className='h-10 w-10' />
+                                <Link href='/' legacyBehavior>
+                                    <a className="font-medium text-base">PikriNtr</a>
                                 </Link>
                             </div>
                             <div className="hidden z-50 lg:ml-8 lg:block lg:self-stretch">
@@ -23,7 +23,7 @@ const Navbar = () => {
                 </MaxWidthWrapper>
             </header>
         </div>
-    )
+    );
 }
 
 export default Navbar
