@@ -3,6 +3,9 @@ import { useState, useRef, useEffect } from "react";
 const HoverImageVideo2 = () => {
   const [isHovered, setIsHovered] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const handleClick = () => {
+    window.location.href = "https://www.instagram.com/p/Cld_BYaPbY8";
+  };
 
   useEffect(() => {
     if (videoRef.current) {
@@ -15,6 +18,7 @@ const HoverImageVideo2 = () => {
       className="w-full max-w-lg h-64 relative overflow-hidden"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      onClick={handleClick}
     >
       {!isHovered ? (
         <img

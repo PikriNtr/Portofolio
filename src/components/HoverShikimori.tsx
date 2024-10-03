@@ -2,6 +2,10 @@ import { useState } from "react";
 
 const HoverImageVideo = () => {
   const [isHovered, setIsHovered] = useState(false);
+  const handleClick = () => {
+    window.location.href = "https://www.instagram.com/p/C0OTPihLtxl";
+  };
+  
   
 
   return (
@@ -9,6 +13,7 @@ const HoverImageVideo = () => {
       className="w-full max-w-lg h-64 relative overflow-hidden"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      onClick={handleClick}
     >
       {!isHovered ? (
         <img

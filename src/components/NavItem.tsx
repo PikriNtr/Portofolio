@@ -80,7 +80,7 @@ const NavItem = ({
                       </div>
 
                       <Link
-                        href='/'
+                        href='https://www.instagram.com/p/C0OTPihLtxl/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=='
                         className='mt-6 block font-medium text-gray-900'>
                         Shikimori Edit
                       </Link>
