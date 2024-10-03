@@ -7,6 +7,8 @@ import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import Link from 'next/link'
 import HoverImageVideo from './HoverShikimori'
+import { ReactNode } from 'react'
+import HoverImageVideo2 from './HoverCar'
 
 type Category = (typeof PRODUCT_CATEGORIES)[number]
 
@@ -25,6 +27,10 @@ const NavItem = ({
   close,
   isOpen,
 }: NavItemProps) => {
+  function item(value: { name: string; href: string; imageSrc: string }, index: number, array: { name: string; href: string; imageSrc: string }[]): ReactNode {
+    throw new Error('Function not implemented.')
+  }
+
   return (
     
     <div className='flex'>
@@ -86,11 +92,32 @@ const NavItem = ({
                     </div>
                   ))}
                 </div>
+                <div className='col-span-4 col-start-1 grid grid-cols-3 gap-x-8'>
+                {category.featured.map((item) => (
+                    <div
+                      onClick={() => close}
+                      key={item.name}
+                      className='group relative text-base sm:text-sm jus'>
+                      <div className='relative aspect-video overflow-hidden rounded-lg scale-[1.05px] bg-white group-hover:opacity-75 '>
+                        <HoverImageVideo2 />
+                      </div>
+
+                      <Link
+                        href='/'
+                        className='mt-6 block font-medium text-gray-900'>
+                        Car Edit
+                      </Link>
+                      <p
+                        className='mt-1'
+                        aria-hidden='true'>
+                        Instagram
+                      </p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
-
-
         </div>
       ) : null}
     </div>

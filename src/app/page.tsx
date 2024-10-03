@@ -36,11 +36,11 @@ export default function Home() {
         .
       </h1>
       <p className="text-gray-900 font-normal ml-1 mt-[10px] text-2xl">
-        kontol test test testtestest test
+        wasting time to code/game
       </p>
     </div>
     <div className="py-[150px] mt-[-120px] max-w-3xl">
-    <p className=" text-lg max-w-prose text-muted-foreground">Ini cuman test doang</p>
+    <p className=" text-lg max-w-prose text-muted-foreground">code JS, C, PHP(inc) and play osu!</p>
       <div className="flex flex-col sm:flex-row gap-4 mt-6">
         <Link href='https://github.com/PikriNtr' className={buttonVariants()}>Github Profile</Link>
         <AllProject />
@@ -50,6 +50,17 @@ export default function Home() {
       </div>
     </div>
   </MaxWidthWrapper>
+
+<section>
+  <MaxWidthWrapper className="py-[150px]">
+    <div className="mt-40">
+      <h2 className="text-2xl font-medium text-gray-900">Thanks to:</h2>
+      <div className="py-60">
+      <h2 className="text-2xl font-medium text-gray-900">Github</h2>
+      </div>
+    </div>
+  </MaxWidthWrapper>
+</section>
 
 <section className='border-t border-gray-200 bg-gray-50'>
     <MaxWidthWrapper className='py-20'>
@@ -77,6 +88,7 @@ export default function Home() {
     </div>
   </MaxWidthWrapper>
 </section>
+
 
 <footer className="py-10 px-6 bg-gradient-to-r from-gray-800 to-gray-900 text-white">
 <MaxWidthWrapper>

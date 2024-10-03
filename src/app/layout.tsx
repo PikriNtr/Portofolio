@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "PikriNtr",
-  description: "Supported by create next app",
+  description: "Supported by NextJS",
 };
 
 export default function RootLayout({

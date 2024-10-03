@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { VideoHTMLAttributes } from "react";
 
 const HoverImageVideo = () => {
   const [isHovered, setIsHovered] = useState(false);
+  
 
   return (
     <div
@@ -12,16 +12,15 @@ const HoverImageVideo = () => {
     >
       {!isHovered ? (
         <img
-          src="/shikimori.png" // Replace with your image path
+          src="/shikimori.png" 
           alt="Thumbnail"
           className="w-full h-full object-cover"
         />
       ) : (
         <video
-          src="/shikimori.mp4" // Replace with your video path
+          src="/shikimori.mp4" 
           autoPlay
           loop
-          muted
           className="absolute w-full h-full object-bottom bottom-[5.5px] scale-[1.05] object-cover"
         />
       )}
