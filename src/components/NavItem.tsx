@@ -67,7 +67,7 @@ const NavItem = ({
           />
 
           <div className='relative bg-white left-[50px]'>
-            <div className='mx-auto max-w-7xl px-8'>
+            <div className='mx-auto max-w-5xl px-8'>
               <div className='grid grid-cols-4 gap-x-8 gap-y-10 py-16'>
                 <div className='col-span-4 col-start-1 grid grid-cols-3 gap-x-8'>
                   {category.featured.map((item) => (

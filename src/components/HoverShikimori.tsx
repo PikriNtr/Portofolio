@@ -26,7 +26,7 @@ const HoverImageVideo = () => {
           src="/shikimori.mp4" 
           autoPlay
           loop
-          className="absolute w-full h-full object-bottom bottom-[5.5px] scale-[1.05] object-cover"
+          className="absolute w-full h-full object-bottom bottom-[44px] scale-[1.05] object-cover"
         />
       )}
     </div>
