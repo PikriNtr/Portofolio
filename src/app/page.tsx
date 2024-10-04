@@ -51,20 +51,53 @@ export default function Home() {
     </div>
   </MaxWidthWrapper>
 
-<section>
+  <section>
   <MaxWidthWrapper className="py-[150px]">
-    <div className="mt-40">
-      <h2 className="text-2xl font-medium text-gray-900">Thanks to:</h2>
-      <div className="py-60">
-      <h2 className="text-2xl font-medium text-gray-900">Github</h2>
+    <div className="flex flex-col items-center justify-center py-10">
+      <h1 className="text-2xl font-semibold mb-8">
+        Thanks to this tools/framework/library that powered this web
+      </h1>
+      <div className="flex-col items-center justify-center grid grid-cols-4 gap-4">
+        <div className="flex items-center justify-center p-4">
+          <a href="https://github.com">
+            <img 
+            src="/github.png" 
+            alt="Github logo" 
+            />
+          </a>
+        </div>
+        <div className="flex items-center justify-center p-4">
+          <a href="https://nextjs.org">
+            <img 
+            src="/nextjslogo.png" 
+            alt="NextJS logo" 
+            />
+          </a>
+        </div>
+        <div className="flex items-center justify-center p-4">
+          <a href="https://tailwindcss.com">
+            <img 
+            src="/tailwind.png" 
+            alt="Taiwlind logo" 
+            />
+          </a>
+        </div>
+        <div className="flex items-center justify-center p-4">
+          <a href="https://vercel.com">
+            <img 
+            src="/vercellogo.png" 
+            alt="Vercel logo" 
+            />
+          </a>
+        </div>
       </div>
     </div>
   </MaxWidthWrapper>
 </section>
 
-<section className='border-t border-gray-200 bg-gray-50'>
-    <MaxWidthWrapper className='py-20'>
-      <div className='py-[150px] grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-0'>
+<section className='bg-white'>
+    <MaxWidthWrapper className='py-28'>
+      <div className='py-[100px] grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-0'>
         {perks.map((perk) => (
           <div
             key={perk.name}
@@ -90,9 +123,9 @@ export default function Home() {
 </section>
 
 
-<footer className="py-10 px-6 bg-gradient-to-r from-gray-800 to-gray-900 text-white">
+<footer className="py-5 px-6 bg-gradient-to-r from-slate-950 to-slate-950 text-white">
 <MaxWidthWrapper>
-  <div className="flex justify-between mt-10 ml-10 mr-10">
+  <div className="flex justify-between mt-2 ml-10 mr-10">
     <div>
       <h3 className="text-lg font-semibold mb-2">About</h3>
       <ul className="space-y-2 text-sm">
@@ -110,7 +143,7 @@ export default function Home() {
       </ul>
     </div>
   </div>
-  <div className="mt-10 border-t border-gray-700 pt-10 ml-10 mr-10">
+  <div className="mt-7 border-t border-gray-700 pt-10 ml-10 mr-10">
     <div className="flex justify-between items-center">
       <div>
         <h3 className="text-lg font-semibold">PikriNtr</h3>
