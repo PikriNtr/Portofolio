@@ -7,8 +7,8 @@ import Navbar from "@/components/Navbar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "PikriNtr",
-  description: "Supported by NextJS",
+  title: "PikriNtr Personal Portofolio Website",
+  description: "This is a simple portofolio website that using NextJS as a framework, Typescript as the language, and Tailwind as a styling",
 };
 
 export default function RootLayout({
