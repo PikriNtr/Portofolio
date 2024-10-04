@@ -42,9 +42,9 @@ export default function Home() {
     <div className="py-[150px] mt-[-120px] max-w-3xl">
     <p className=" text-lg max-w-prose text-muted-foreground">code JS, C, PHP(inc) and play osu!</p>
       <div className="flex flex-col sm:flex-row gap-4 mt-6">
-        <Link href='https://github.com/PikriNtr' className={buttonVariants()}>Github Profile</Link>
+        <Link href='https://github.com/PikriNtr' className={`w-1/3 sm:w-auto ${buttonVariants()}`}>Github Profile</Link>
         <AllProject />
-        <Link href="https://github.com/PikriNtr/Portofolio" className={buttonVariants()}>
+        <Link href="https://github.com/PikriNtr/Portofolio" className={`w-1/3 sm:w-auto ${buttonVariants()}`}>
         This Project &rarr;
         </Link>
       </div>
