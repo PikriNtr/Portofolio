@@ -65,7 +65,7 @@ const NavItem = ({
           />
 
           {/* The scrollable dropdown container */}
-          <div className='relative bg-white py-10 max-h-[700px] overflow-y-auto'>
+          <div className='relative bg-white py-10 max-h-[100vh] overflow-y-auto'>
             <div className='mx-auto max-w-5xl px-8'>
               <div className='grid grid-cols-2 gap-x-8 gap-y-10 py-16'>
                 <div className='col-span-4 col-start-1 grid grid-cols-3 gap-x-10 gap-y-10'>
