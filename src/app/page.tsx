@@ -96,7 +96,7 @@ export default function Home() {
 </section>
 
 <section className='bg-white'>
-    <MaxWidthWrapper className='py-28'>
+    <MaxWidthWrapper className='py-20'>
       <div className='py-[100px] grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-0'>
         {perks.map((perk) => (
           <div
