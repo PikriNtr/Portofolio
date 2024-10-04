@@ -4,7 +4,7 @@ const HoverImageVideo4 = () => {
   const [isHovered, setIsHovered] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
   const handleClick = () => {
-    window.location.href = "https://www.instagram.com/p/Cld_BYaPbY8";
+    window.location.href = "https://www.instagram.com/reel/C9jtvgqP7CJ";
   };
 
   useEffect(() => {
