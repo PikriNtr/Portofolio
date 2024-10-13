@@ -40,10 +40,10 @@ export default function Home() {
       </p>
     </div>
     <div className="py-[150px] mt-[-120px] max-w-3xl">
-    <p className=" text-lg max-w-prose text-muted-foreground">code JS, C, PHP(inc) and play osu!</p>
+    <p className=" text-lg max-w-prose text-muted-foreground">code JS. learning C++, Ruby and play osu!</p>
       <div className="flex flex-col sm:flex-row gap-4 mt-6">
         <Link href='https://github.com/PikriNtr' className={`w-1/3 sm:w-auto ${buttonVariants()}`}>Github Profile</Link>
-        <AllProject />
+        {/* <AllProject /> */}
         <Link href="https://github.com/PikriNtr/Portofolio" className={`w-1/3 sm:w-auto ${buttonVariants()}`}>
         This Project &rarr;
         </Link>
@@ -53,8 +53,8 @@ export default function Home() {
 
   <section>
   <MaxWidthWrapper className="py-[150px]">
-    <div className="flex flex-col items-center justify-center py-10">
-      <h1 className="text-2xl font-semibold mb-8">
+    <div className="flex flex-col items-center justify-center py-10 sm:grid-cols-2 sm:gap-x-6 sm:text-center md:text-center">
+      <h1 className="text-2xl font-semibold mb-8 sm:text-center md:text-center">
         Thanks to this tools/framework/library that powered this web
       </h1>
       <div className="flex-col items-center justify-center grid grid-cols-4 gap-4">
