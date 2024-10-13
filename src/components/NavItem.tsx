@@ -33,7 +33,7 @@ const NavItem = ({
       <div className='relative flex items-center'>
         <Button
           className='gap-1.5'
-          variant={isOpen ? 'secondary' : 'ghost'}
+          variant='ghost'
         >
           <a className="font-medium text-base" href='https://paypal.me/PikriNtr'>Donate</a>
         </Button>
