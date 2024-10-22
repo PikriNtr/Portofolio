@@ -24,3 +24,4 @@ export const useOnClickOutside = <T extends HTMLElement = HTMLElement>(
       document.removeEventListener("touchstart", listener);
     };
   }, [ref, handler]);
+};
