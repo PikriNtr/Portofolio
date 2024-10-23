@@ -17,12 +17,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full no-scrollbar">
+    <html lang="en" className="h-full no-scrollbar dark:bg-[#161616] dark:text-white">
       <body className={cn(
-        'relative h-full font-sans antialiased', inter.className)}>
-          <main className="relative flex flex-col min-h-screen">
+        'relative h-full font-sans antialiased dark:bg-[#161616] dark:text-white', inter.className)}>
+          <main className="relative flex flex-col min-h-screen dark:bg-[#161616]">
           <Navbar />
-          <div className="flex-grow flex-1">{children}</div>
+          <div className="flex-grow flex-1 dark:bg-[#161616] dark:text-white">{children}</div>
           </main>
       </body>
     </html>
