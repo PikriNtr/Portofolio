@@ -67,21 +67,21 @@ const NavItem = ({
 
       <div className='relative flex items-center'>
         <Button
-          className='gap-1.5'
-          variant='ghost'
+          className='gap-1.5 bg-white'
+          variant='default'
         >
-          <a className="font-medium text-base" href='https://paypal.me/PikriNtr'>Donate</a>
+          <a className="font-medium text-base p-1 text-black" href='https://paypal.me/PikriNtr'>Donate</a>
         </Button>
       </div>
 
 
       <div className='relative flex items-center'>
         <Button
-          className='gap-1.5'
+          className='gap-1.5 bg-white'
+          variant='default'
           onClick={handleOpen}
-          variant={isOpen ? 'secondary' : 'ghost'}
         >
-          <a className="font-medium text-base">Project</a>
+          <a className="font-medium text-base p-1 text-black">Project</a>
           <ChevronDown
             className={cn(
               'h-4 w-4 transition-all text-muted-foreground',
@@ -97,23 +97,23 @@ const NavItem = ({
         <div
           onClick={() => close()}
           className={cn(
-            'absolute inset-x-0 top-full text-sm text-muted-foreground',
+            'absolute inset-x-0 top-full text-sm text-muted-foreground dark:bg-gray-900' ,
             {
-              'animate-in fade-in-10 slide-in-from-top-5':
+              'animate-in fade-in-10 slide-in-from-top-5 dark:bg-gray-900':
                 !isAnyOpen,
             }
           )}
         >
           <div
-            className='absolute inset-0 top-1/2 bg-white shadow'
+            className='absolute inset-0 top-1/2 bg-white shadow dark:bg-[#161616]'
             aria-hidden='true'
           />
 
           {/* The scrollable dropdown container */}
-          <div className='relative bg-white py-10 max-h-[100vh] overflow-y-auto no-scrollbar dark:bg-gray-900'>
-            <div className='mx-auto max-w-5xl px-8'>
+          <div className='relative bg-white py-10 max-h-[100vh] overflow-y-auto no-scrollbar dark:bg-[#161616]'>
+            <div className='mx-auto max-w-5xl px-8 dark:bg-[#161616]'>
               <div className='grid grid-cols-2 gap-x-8 gap-y-10 py-16'>
-                <div className='col-span-4 col-start-1 grid grid-cols-3 gap-x-10 gap-y-10'>
+                <div className='col-span-4 col-start-1 grid grid-cols-3 gap-x-10 gap-y-10 dark:bg-[#161616]'>
                   {category.featured.map((item) => (
                     <div
                       onClick={() => close}
@@ -141,8 +141,90 @@ const NavItem = ({
                     </div>
                   ))}
 
-                  {/* Add more items here following the same pattern */}
-                  
+                  {category.featured.map((item) => (
+                    <div
+                    onClick={() => close}
+                    key={item.name}
+                    className='group relative text-base sm:text-sm jus'
+                  >
+                    <div className='relative aspect-video overflow-hidden rounded-lg scale-[1.05px] bg-white dark:bg-gray-900 group-hover:opacity-75 '>
+                      <HoverImageVideo2 />
+                    </div>
+
+                    <Link
+                      href='/'
+                      className='mt-6 block font-medium text-gray-900 dark:text-gray-100'
+                    >
+                      Nissan GTR-34
+                    </Link>
+                    <p className='mt-1 dark:text-gray-300'>
+                      Instagram
+                      <br />
+                      made with
+                      <br />
+                      Adobe After Effects CC 2019 and Alight Motion
+                    </p>
+                  </div>
+                  ))}
+
+                  {category.featured.map((item) => (
+                    <div
+                      onClick={() => close}
+                      key={item.name}
+                      className='group relative text-base sm:text-sm jus'
+                    >
+                      <div className='relative aspect-video overflow-hidden rounded-lg scale-[1.05px] bg-white dark:bg-gray-900 group-hover:opacity-75 '>
+                        <HoverImageVideo3 />
+                      </div>
+
+                      <Link
+                        href='/'
+                        className='mt-6 block font-medium text-gray-900 dark:text-gray-100'
+                      >
+                        Nianely Intro2D
+                      </Link>
+                      <p className='mt-1 dark:text-gray-300'>
+                        Instagram
+                        <br />
+                        made with
+                        <br />
+                        Adobe After Effect CC 2019
+                      </p>
+                      <p className='mt-0 dark:text-gray-300'>
+                        Special thanks to{' '}
+                        <a href='https://www.instagram.com/mevyx._/' className='text-blue-600 dark:text-blue-400'>
+                          Mevyx
+                        </a>{' '}
+                        for helping
+                      </p>
+                    </div>
+                  ))}
+
+                  {category.featured.map((item) => (
+                    <div
+                      onClick={() => close}
+                      key={item.name}
+                      className='group relative text-base sm:text-sm jus'
+                    >
+                      <div className='relative aspect-video overflow-hidden rounded-lg scale-[1.05px] bg-white dark:bg-gray-900 group-hover:opacity-75 '>
+                        <HoverImageVideo4 />
+                      </div>
+
+                      <Link
+                        href='/'
+                        className='mt-6 block font-medium text-gray-900 dark:text-gray-100'
+                      >
+                        YRLPLYZ Intro3D
+                      </Link>
+                      <p className='mt-1 dark:text-gray-300'>
+                        Instagram
+                        <br />
+                        made with
+                        <br />
+                        After Effects CC 2019 and CINEMA4D R-20
+                      </p>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
