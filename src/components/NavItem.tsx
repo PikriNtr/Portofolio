@@ -10,6 +10,7 @@ import HoverImageVideo from './HoverShikimori'
 import HoverImageVideo2 from './HoverCar'
 import HoverImageVideo3 from './HoverNianely'
 import HoverImageVideo4 from './HoverYrlplyz'
+import HoverImageVideo5 from './HoverAnother'
 
 type Category = (typeof PRODUCT_CATEGORIES)[number]
 
@@ -133,7 +134,6 @@ const NavItem = ({
                       <p className='mt-1 dark:text-gray-400' aria-hidden='true'>
                         Instagram
                         <br />
-                        <br />
                         made with 
                         <br />
                         Alight Motion
@@ -222,6 +222,32 @@ const NavItem = ({
                         made with
                         <br />
                         After Effects CC 2019 and CINEMA4D R-20
+                      </p>
+                    </div>
+                  ))}
+
+                  {category.featured.map((item) => (
+                    <div
+                      onClick={() => close}
+                      key={item.name}
+                      className='group relative text-base sm:text-sm jus'
+                    >
+                      <div className='relative aspect-video overflow-hidden rounded-lg scale-[1.05px] bg-white dark:bg-gray-900 group-hover:opacity-75 '>
+                        <HoverImageVideo5 />
+                      </div>
+
+                      <Link
+                        href='/'
+                        className='mt-6 block font-medium text-gray-900 dark:text-gray-100'
+                      >
+                        Story of My Life
+                      </Link>
+                      <p className='mt-1 dark:text-gray-300'>
+                        Instagram
+                        <br />
+                        made with
+                        <br />
+                        After Effects CC 2019
                       </p>
                     </div>
                   ))}

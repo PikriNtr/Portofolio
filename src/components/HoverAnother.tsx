@@ -4,7 +4,7 @@ const HoverImageVideo5 = () => {
   const [isHovered, setIsHovered] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
   const handleClick = () => {
-    window.location.href = "https://www.instagram.com/reel/C9jtvgqP7CJ";
+    window.location.href = "https://www.instagram.com/p/DBWRIYhPrfd";
   };
 
   useEffect(() => {
@@ -22,15 +22,16 @@ const HoverImageVideo5 = () => {
     >
       {!isHovered ? (
         <img
-          src="/yrlplyz.png" 
+          src="/feb.png" 
           alt="Thumbnail"
         />
       ) : (
         <video
           ref={videoRef}
-          src="/yrlplyz.mp4" 
+          src="/feb.mp4" 
           autoPlay
           loop
+          className="absolute w-full h-full object-bottom bottom-[34px] scale-[1.05] object-cover"
         />
       )}
     </div>
