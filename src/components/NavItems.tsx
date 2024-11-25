@@ -30,7 +30,7 @@ const NavItems = () => {
 
   return (
     <div
-      className="flex gap-4 h-full overflow-x-auto scroll-smooth dark:bg-gray-900" // Enable horizontal scrolling
+      className="flex gap-4 h-full overflow-x-auto scroll-smooth dark:bg-gray-900" 
       ref={navRef}
     >
       {PRODUCT_CATEGORIES.map((category, i) => {
