@@ -125,7 +125,7 @@ const NavItem = ({
                     linkUrl="https://www.instagram.com/p/Cld_BYaPbY8"
                     title="Something"
                     software="After Effect CC 2019"
-                    description="Something"
+                    description="Something idk"
                   />
                   <HoverVideoPlayer
                     thumbnailSrc="/nianely.jpg"
