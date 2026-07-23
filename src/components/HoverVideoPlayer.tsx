@@ -65,7 +65,9 @@ const HoverVideoPlayer = ({
             
             {/* Video Name (Bold & prominent) */}
             {title && (
-            <Link href={linkUrl} className="block font-medium text-gray-900 dark:text-gray-100 text-lg">
+            <Link 
+                href={linkUrl!} 
+                className="block font-medium text-gray-900 dark:text-gray-100 text-lg">
                 {title}
             </Link>
             )}
