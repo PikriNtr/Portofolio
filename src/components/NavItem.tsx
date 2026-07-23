@@ -6,11 +6,7 @@ import { Button } from './ui/button'
 import { ChevronDown, SunMoon } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import Link from 'next/link'
-import HoverImageVideo from './HoverShikimori'
-import HoverImageVideo2 from './HoverCar'
-import HoverImageVideo3 from './HoverNianely'
-import HoverImageVideo4 from './HoverYrlplyz'
-import HoverImageVideo5 from './HoverAnother'
+import HoverVideoPlayer from './HoverVideoPlayer'
 
 type Category = (typeof PRODUCT_CATEGORIES)[number]
 
@@ -115,142 +111,46 @@ const NavItem = ({
             <div className='mx-auto max-w-5xl px-8 dark:bg-[#161616]'>
               <div className='grid grid-cols-2 gap-x-8 gap-y-10 py-16'>
                 <div className='col-span-4 col-start-1 grid grid-cols-3 gap-x-10 gap-y-10 dark:bg-[#161616]'>
-                  {category.featured.map((item) => (
-                    <div
-                      onClick={() => close}
-                      key={item.name}
-                      className='group relative text-base sm:text-sm jus'
-                    >
-                      <div className='relative aspect-video overflow-hidden rounded-lg scale-[1.05px] bg-white group-hover:opacity-75 '>
-                        <HoverImageVideo />
-                      </div>
-
-                      <Link
-                        href='https://www.instagram.com/p/C0OTPihLtxl/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=='
-                        className='mt-6 block font-medium text-gray-900 dark:text-gray-200'
-                      >
-                        Shikimori is not just a cutie
-                      </Link>
-                      <p className='mt-1 dark:text-gray-400' aria-hidden='true'>
-                        Instagram
-                        <br />
-                        made with 
-                        <br />
-                        Alight Motion
-                      </p>
-                    </div>
-                  ))}
-
-                  {category.featured.map((item) => (
-                    <div
-                    onClick={() => close}
-                    key={item.name}
-                    className='group relative text-base sm:text-sm jus'
-                  >
-                    <div className='relative aspect-video overflow-hidden rounded-lg scale-[1.05px] bg-white dark:bg-gray-900 group-hover:opacity-75 '>
-                      <HoverImageVideo2 />
-                    </div>
-
-                    <Link
-                      href='/'
-                      className='mt-6 block font-medium text-gray-900 dark:text-gray-100'
-                    >
-                      Nissan GTR-34
-                    </Link>
-                    <p className='mt-1 dark:text-gray-300'>
-                      Instagram
-                      <br />
-                      made with
-                      <br />
-                      Adobe After Effects CC 2019 and Alight Motion
-                    </p>
-                  </div>
-                  ))}
-
-                  {category.featured.map((item) => (
-                    <div
-                      onClick={() => close}
-                      key={item.name}
-                      className='group relative text-base sm:text-sm jus'
-                    >
-                      <div className='relative aspect-video overflow-hidden rounded-lg scale-[1.05px] bg-white dark:bg-gray-900 group-hover:opacity-75 '>
-                        <HoverImageVideo3 />
-                      </div>
-
-                      <Link
-                        href='/'
-                        className='mt-6 block font-medium text-gray-900 dark:text-gray-100'
-                      >
-                        Nianely Intro2D
-                      </Link>
-                      <p className='mt-1 dark:text-gray-300'>
-                        Instagram
-                        <br />
-                        made with
-                        <br />
-                        Adobe After Effect CC 2019
-                      </p>
-                      <p className='mt-0 dark:text-gray-300'>
-                        Special thanks to{' '}
-                        <a href='https://www.instagram.com/mevyx._/' className='text-blue-600 dark:text-blue-400'>
-                          Mevyx
-                        </a>{' '}
-                        for helping
-                      </p>
-                    </div>
-                  ))}
-
-                  {category.featured.map((item) => (
-                    <div
-                      onClick={() => close}
-                      key={item.name}
-                      className='group relative text-base sm:text-sm jus'
-                    >
-                      <div className='relative aspect-video overflow-hidden rounded-lg scale-[1.05px] bg-white dark:bg-gray-900 group-hover:opacity-75 '>
-                        <HoverImageVideo4 />
-                      </div>
-
-                      <Link
-                        href='/'
-                        className='mt-6 block font-medium text-gray-900 dark:text-gray-100'
-                      >
-                        YRLPLYZ Intro3D
-                      </Link>
-                      <p className='mt-1 dark:text-gray-300'>
-                        Instagram
-                        <br />
-                        made with
-                        <br />
-                        After Effects CC 2019 and CINEMA4D R-20
-                      </p>
-                    </div>
-                  ))}
-
-                  {category.featured.map((item) => (
-                    <div
-                      onClick={() => close}
-                      key={item.name}
-                      className='group relative text-base sm:text-sm jus'
-                    >
-                      <div className='relative aspect-video overflow-hidden rounded-lg scale-[1.05px] bg-white dark:bg-gray-900 group-hover:opacity-75 '>
-                        <HoverImageVideo5 />
-                      </div>
-
-                      <Link
-                        href='/'
-                        className='mt-6 block font-medium text-gray-900 dark:text-gray-100'
-                      >
-                        Story of My Life
-                      </Link>
-                      <p className='mt-1 dark:text-gray-300'>
-                        Instagram
-                        <br />
-                        made with
-                        <br />
-                        After Effects CC 2019
-                      </p>
-                    </div>
-                  ))}
+                  <HoverVideoPlayer
+                    thumbnailSrc="/caredit.jpg"
+                    videoSrc="/caredit.mp4"
+                    linkUrl="https://www.instagram.com/p/Cld_BYaPbY8"
+                    title="Nissan GTR R34"
+                    software="Alight Motion"
+                    description="First Car Edit"
+                  />
+                  <HoverVideoPlayer
+                    thumbnailSrc="/feb.png"
+                    videoSrc="/feb.mp4"
+                    linkUrl="https://www.instagram.com/p/Cld_BYaPbY8"
+                    title="Something"
+                    software="After Effect CC 2019"
+                    description="Something"
+                  />
+                  <HoverVideoPlayer
+                    thumbnailSrc="/nianely.jpg"
+                    videoSrc="/nianely.mp4"
+                    linkUrl="https://www.instagram.com/p/Cld_BYaPbY8"
+                    title="Intro 2D Request"
+                    software="Alight Motion and After Effect CC 2019"
+                    description="Special thanks to Mevyx for helping me to make this intro"
+                  />
+                  <HoverVideoPlayer
+                    thumbnailSrc="/shikimori.png"
+                    videoSrc="/shikimori.mp4"
+                    linkUrl="https://www.instagram.com/p/Cld_BYaPbY8"
+                    title="AMV Shikimori"
+                    software="After Effect CC 2019"
+                    description="Really love Shikimori, so i make this AMV"
+                  />
+                  <HoverVideoPlayer
+                    thumbnailSrc="/yrlplyz.png"
+                    videoSrc="/yrlplyz.mp4"
+                    linkUrl="https://www.instagram.com/p/Cld_BYaPbY8"
+                    title="2.5D Intro Request"
+                    software="Cinema 4D and After Effect CC 2019"
+                    description="First 2.5 Intro"
+                  />
                 </div>
               </div>
             </div>
