@@ -1,3 +1,5 @@
+"use client";
+
 import {useState, useRef, useEffect} from 'react';
 import Link from 'next/link';
 
@@ -34,10 +36,19 @@ const HoverVideoPlayer = ({
     };
 
     useEffect(() => {
-        if (videoRef.current) {
+        if (isHovered && videoRef.current) {
             videoRef.current.controls = false;
+            // React sometimes fails to tell the browser the video is muted when rendering dynamically. 
+            // We force it here before playing so the browser doesn't block it.
+            videoRef.current.defaultMuted = true;
+            videoRef.current.muted = true;
+            
+            // Force the video to play when it appears
+            videoRef.current.play().catch((e) => {
+                console.log("Autoplay prevented by browser:", e);
+            });
         }
-    }, []);
+    }, [isHovered]);
 
      return (
         <div className="flex flex-col group relative text-base sm:text-sm">
@@ -51,7 +62,14 @@ const HoverVideoPlayer = ({
             {!isHovered ? (
             <img src={thumbnailSrc} alt={title || "Thumbnail"} className={imageClassName} />
             ) : (
-            <video ref={videoRef} src={videoSrc} autoPlay loop muted className={videoClassName} />
+            <video 
+                ref={videoRef} 
+                src={videoSrc} 
+                autoPlay 
+                loop
+                playsInline // Critical for autoplay in many browsers
+                className={videoClassName} 
+            />
             )}
         </div>
         {/* Text Content Below the Video */}

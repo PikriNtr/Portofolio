@@ -1,27 +1,11 @@
+
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { buttonVariants } from "@/components/ui/button";
-import { CheckCircle, ArrowDownToLine, Video, Code, Airplay, Github } from "lucide-react";
 import Link from "next/link";
-import AllProject from "./AllProject";
-import Navbar from "@/components/Navbar";
+import HoverVideoPlayer from "@/components/HoverVideoPlayer";
 
-const perks = [
-  {
-    name: 'Device',
-    Icon: Airplay,
-    description: "im using Laptop for coding and editing. I also use smartphone for testing and debugging mobile application.",
-  },
-  {
-    name: 'Programming Language',
-    Icon: Code,
-      description: "I can use Javascript, Typescript for programming language. Still Learning on Python and C++. I also can use React, Next.js, and Flutter little bit for building web and mobile application. I also can use Node.js for backend development."
-    },
-    {
-      name: 'Editing Software',
-      Icon: Video,
-      description: "Im using Adobe After Effect, Adobe Premiere Pro, and Alight Motion for video editing. I also use Adobe Photoshop (little bit) for photo editing. Iam also using Figma for UI/UX Design and FL Studio for music production.",
-  }
-]
+
+
 
 export default function Home() {
   
@@ -61,51 +45,61 @@ export default function Home() {
 
 <section className="dark:bg-[#161616] ">
   <MaxWidthWrapper className="py-[150px]">
-    <div className="flex flex-col items-center justify-center py-10 sm:grid-cols-2 sm:gap-x-6 sm:text-center md:text-center dark:bg-[#161616]">
-      <h1 className="text-2xl font-semibold mb-8 sm:text-center md:text-center">
-        Thanks to this tools/framework/library that powered this web
+    <div className="flex flex-col gap-4">
+      <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl left-[-50px] dark:text-white">
+        My Project
       </h1>
-      <div className="flex-col items-center justify-center grid grid-cols-4 gap-4">
-        <div className="flex items-center justify-center p-4">
-          <a href="https://github.com">
-            <img 
-            src="/github.png" 
-            alt="Github logo" 
-            className="mix-blend-multiply"
-            />
-          </a>
-        </div>
-        <div className="flex items-center justify-center p-4">
-          <a href="https://nextjs.org">
-            <img 
-            src="/nextjslogo.png" 
-            alt="NextJS logo" 
-            className="mix-blend-multiply"
-            />
-          </a>
-        </div>
-        <div className="flex items-center justify-center p-4">
-          <a href="https://tailwindcss.com">
-            <img 
-            src="/tailwind.png" 
-            alt="Taiwlind logo" 
-            className="mix-blend-multiply"
-            />
-          </a>
-        </div>
-        <div className="flex items-center justify-center p-4">
-          <a href="https://vercel.com">
-            <img 
-            src="/vercellogo.png" 
-            alt="Vercel logo"
-            className="dark:contrast-200" 
-            />
-          </a>
-        </div>
+      <p className="text-gray-900 font-normal ml-1 mt-[10px] text-2xl dark:text-white">
+        Some of my project that I made
+      </p>
+    </div>
+    <div className="mt-10">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <HoverVideoPlayer
+          thumbnailSrc="/nianely.jpg"
+          videoSrc="/nianely.mp4"
+          linkUrl="https://www.instagram.com/p/Cld_BYaPbY8"
+          title="Nianely"
+          software="Alight Motion"
+          description="Intro 2D"
+        />
+        <HoverVideoPlayer
+          thumbnailSrc="/shikimori.png"
+          videoSrc="/shikimori.mp4"
+          linkUrl="https://www.instagram.com/p/Cld_BYaPbY8"
+          title="AMV Shikimori"
+          software="After Effect CC 2019"
+          description="Really love Shikimori, so i make this AMV"
+        />
+        <HoverVideoPlayer
+          thumbnailSrc="/yrlplyz.png"
+          videoSrc="/yrlplyz.mp4"
+          linkUrl="https://www.instagram.com/p/Cld_BYaPbY8"
+          title="2.5D Intro Request"
+          software="Cinema 4D and After Effect CC 2019"
+          description="First 2.5 Intro"
+        />
+        <HoverVideoPlayer
+          thumbnailSrc="/caredit.jpg"
+          videoSrc="/caredit.mp4"
+          linkUrl="https://www.instagram.com/p/Cld_BYaPbY8"
+          title="Nissan GTR R34"
+          software="Alight Motion"
+          description="First Car Edit"
+        />
+        <HoverVideoPlayer
+          thumbnailSrc="/feb.png"
+          videoSrc="/feb.mp4"
+          linkUrl="https://www.instagram.com/p/Cld_BYaPbY8"
+          title="Something"
+          software="After Effect CC 2019"
+          description="Something idk"
+        />
       </div>
     </div>
   </MaxWidthWrapper>
 </section>
+
 
 </>;
 }
